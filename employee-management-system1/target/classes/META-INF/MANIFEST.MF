@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: kapil
+Build-Jdk: 23
+Implementation-Title: employee-management-system
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.staxrt.tutorial
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/employee-management-system1
+Created-By: Maven Integration for Eclipse
+

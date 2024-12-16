@@ -1,0 +1,26 @@
+<div >
+    <div class="profile-form">
+      <div > <!-- Add a div for the profile bar -->
+        <h1>Your Profile</h1>
+      </div>
+        
+      <div class="tablediv">
+        <table border="1" style="table-layout:fixed;">
+            <tr>
+                <td><b>Employee Name</b></td>
+                <td>{{ user.name }}</td>
+            </tr>
+           
+            <tr>
+                <td><b>Email</b></td>
+                <td>{{ user.email }}</td>
+            </tr>
+           
+        </table>
+      </div>
+      <div class="center-align">
+        <button  class="submit-button" (click)="openProfileDialog()">Update</button>
+      </div>
+    
+    </div>
+  </div>

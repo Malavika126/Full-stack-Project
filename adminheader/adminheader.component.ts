@@ -1,0 +1,30 @@
+import { Component } from '@angular/core';
+import { NavigationStart, Router } from '@angular/router';
+import { filter } from 'rxjs';
+import { AuthService } from '../auth.service';
+
+@Component({
+  selector: 'app-adminheader',
+  templateUrl: './adminheader.component.html',
+  styleUrls: ['./adminheader.component.css']
+})
+export class AdminheaderComponent {
+  url: string = '/';
+  userName: string = localStorage.getItem('uname') || '';
+  constructor(
+    private route: Router,
+    private authService: AuthService
+  ) { }
+
+
+  ngOnInit(): void {
+    
+  }
+  gotourl(url: string): void {
+    if (url === 'logout') {
+      this.authService.clientLogout();
+      return;
+    }
+    this.route.navigate(["/"+url]);
+  }
+}

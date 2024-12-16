@@ -1,0 +1,35 @@
+<div >
+    <h1>Add Employee</h1>
+    
+      <div class="user-form">
+        <div *ngIf="errorMessage && errorMessage !== ''" class="error" id="errordiv">
+          {{errorMessage}}
+        </div>
+        
+        <div class="form-row">
+          <div class="form-item">
+            <label for="amount">Name:</label>
+            <input type="text" [(ngModel)]="name" required >
+          </div>
+        </div>
+        <div class="form-row">
+            <div class="form-item">
+              <label for="amount">Email:</label>
+              <input type="email" [(ngModel)]="email" required >
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-item" style="width: 306px;">
+              <label for="amount">Birtday:</label>
+              <input type="date" [(ngModel)]="bDate" required >
+            </div>
+          </div>
+          <div class="form-item">
+            <label for="amount">Password:</label>
+            <input type="password" [(ngModel)]="password" required >
+          </div>
+        <div class="button-container">
+          <button type="submit" class="submit-button" (click)="addEmployee()"> {{isEdit ? 'Update' : 'Add'}} </button>
+        </div>
+      </div>
+    </div>
